@@ -11,8 +11,7 @@ interface HygieneResult {
     verdict: string;
 }
 
-const API_URL = "http://127.0.0.1:8000/check-hygiene";
-// const API_URL = "https://pddf0ljm-8000.inc1.devtunnels.ms/check-hygiene";
+const API_URL = import.meta.env.VITE_API_URL as string;
 
 const App: React.FC = () => {
     // 2. Type-safe refs and state
